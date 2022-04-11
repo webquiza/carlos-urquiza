@@ -26,3 +26,41 @@ a:hover {
 .summary {
   text-align: left;
 }
+
+/* Home animation
+-------------------------------------------------- */
+
+.home {
+  animation-name: home-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop moving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left */
+  display: inline-block;
+}
+
+@keyframes home-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the moving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
